@@ -20,10 +20,65 @@
  * ~ Bitwise Inverse (~num1) for this operation, num1 and num2 are still needed
 */
 
+#include <stdio.h>
 #ifndef MATH_H_
 #define MATH_H_
 
+int main()
+{
 //Part of your documentation should be listing the valid inputs and outputs for the functions you create.
-int math(int num1, int num2, char Operator);
+int num1, num2;
+char Operator;
+float result;
 
-#endif /* MATH_H_ */
+printf("Enter a number: " );
+scan("%d", &num1);
+printf("Enter another number:");
+scan("%d", &num2);
+
+printf("Which operation would you like to perform? This can be +, -, *, /, etc.");
+scan("%c", &Operator);
+
+result = 0;
+
+switch(num1, num2, Operator);
+{
+    case '+': 
+        result = num1 + num2;
+        break;
+    case '-':
+        result = num1 - num2;
+        break;
+    case '*':
+        result = num1 * num2;
+        break;
+    case '/':
+        result = num1/num2;
+        break;
+    case '%':
+        result = num1%num2;
+        break;
+    case '<':
+        result = num1 << num2;
+        break;
+    case '>':
+        result = num1 >> num2;
+        break;
+    case '&':
+        result = num1&num2;
+        break;
+    case '|':
+        result = num1|num2;
+        break;
+    case '^':
+        result = num1^num2;
+        break;
+    case '~'
+        result = ~num1;
+        break;
+    default: 
+        printf("Invalid operation.");
+}
+printf(result);
+return 0;
+}
