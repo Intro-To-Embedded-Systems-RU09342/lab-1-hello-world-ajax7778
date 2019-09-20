@@ -31,17 +31,17 @@ int num1, num2;
 char Operator;
 float result;
 
-printf("Enter a number: " );
-scan("%d", &num1);
-printf("Enter another number:");
-scan("%d", &num2);
+printf("Enter a number:" );
+scanf("%i %d", &num1);
+printf("\nEnter another number:");
+scanf("%i %d", &num2);
 
-printf("Which operation would you like to perform? This can be +, -, *, /, etc.");
-scan("%c", &Operator);
+printf("\nWhich operation would you like to perform?");
+scanf("%c %d", &Operator);
 
 result = 0;
 
-switch(num1, num2, Operator);
+switch(num1, num2, Operator)
 {
     case '+': 
         result = num1 + num2;
@@ -73,12 +73,12 @@ switch(num1, num2, Operator);
     case '^':
         result = num1^num2;
         break;
-    case '~'
+    case '~':
         result = ~num1;
         break;
     default: 
-        printf("Invalid operation.");
+        printf("\nInvalid operation.");
 }
-printf(result);
 return 0;
 }
+#endif
